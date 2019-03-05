@@ -1,7 +1,7 @@
 # AWS Cryptography Services AWS Cryptographic Services and Tools Guide
 
 -----
-*****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -14,7 +14,7 @@ Amazon's trademarks and trade dress may not be used in
 
 -----
 ## Contents
-+ [AWS Cryptographic Services and Tools](awscryp-toplevel.md)
++ [AWS Cryptographic Services and Tools](awscryp-overview.md)
    + [What is Cryptography?](awscryp-whatis-toplevel.md)
    + [Cryptography Concepts](cryptography-concepts.md)
       + [Cryptographic Algorithms](concepts-algorithms.md)
@@ -29,7 +29,7 @@ Amazon's trademarks and trade dress may not be used in
       + [When To Use AWS CloudHSM](awscryp-choose-hsm.md)
       + [When To Use AWS Encryption SDK](awscryp-choose-sdk.md)
       + [When To Use DynamoDB Encryption Client](awscryp-choose-ddb.md)
-+ [AWS PKI Services](awspki-toplevel.md)
++ [AWS PKI Services](awspki-overview.md)
    + [What is Public Key Infrastructure?](awspki-whatis-toplevel.md)
    + [PKI Concepts](pki-concepts.md)
    + [AWS Public Key Infrastructure (PKI) Services and Tools](awspki-service-toplevel.md)
