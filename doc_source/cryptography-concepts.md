@@ -5,6 +5,7 @@ As you work with cryptographic tools and services, you are likely to encounter a
 **Topics**
 + [additional authenticated data \(AAD\)](#term-aad)
 + [asymmetric and symmetric encryption](#define-symmetric-asymmetric)
++ [authenticated encryption](#define-authenticated-encryption)
 + [authentication](#define-authentication)
 + [block cipher](#define-block-cipher)
 + [ciphertext](#define-ciphertext)
@@ -25,7 +26,12 @@ As you work with cryptographic tools and services, you are likely to encounter a
 
 **additional authenticated data \(AAD\)**  <a name="term-aad"></a>
 Nonsecret data that is provided to [encryption](#define-encryption) and [decryption](#define-decryption) operations to add provide an additional integrity and authenticity check on the encrypted data\. Typically, the decrypt operation fails if the AAD provided to the encrypt operation does not match the AAD provided to the decrypt operation\.  
-[AWS Key Management Service](awscryp-service-kms.md) \(AWS KMS\) and the [AWS Encryption SDK](awscryp-service-encrypt.md) both support AAD by using an [encryption context](#define-encryption-context)\.
+[AWS Key Management Service](awscryp-service-kms.md) \(AWS KMS\) and the [AWS Encryption SDK](awscryp-service-encrypt.md) both support AAD by using an [encryption context](#define-encryption-context)\.  
+See also: [authenticated encryption](#define-authenticated-encryption)
+
+**authenticated encryption**  <a name="define-authenticated-encryption"></a>
+*Authenticated encryption* uses [additional authenticated data](#term-aad) \(AAD\) to provide confidentiality, data integrity, and authenticity assurances on encrypted data\.   
+For example, the AWS Key Management Service \(AWS KMS\) [https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) API and the encryption methods in the AWS Encryption SDK take an [encryption context](#define-encryption-context) that represents additional authenticated data \(AAD\)\. The encryption context is cryptographically bound to the encrypted data so that the same encryption context is required to decrypt the data\. To learn how to use encryption context to protect the integrity of encrypted data, see [How to Protect the Integrity of Your Encrypted Data by Using AWS Key Management Service and EncryptionContext](https://aws.amazon.com/blogs/security/how-to-protect-the-integrity-of-your-encrypted-data-by-using-aws-key-management-service-and-encryptioncontext/) in the AWS Security Blog\.
 
 **asymmetric and symmetric encryption**  <a name="define-symmetric-asymmetric"></a>
 [Symmetric encryption](concepts-algorithms.md#concepts-algos) uses the same secret key to perform both the [encryption](#define-encryption) and [decryption](#define-decryption) processes\.   

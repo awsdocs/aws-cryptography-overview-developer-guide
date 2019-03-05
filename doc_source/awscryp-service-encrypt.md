@@ -6,6 +6,6 @@ The AWS Encryption SDK works on all types of data\. Every successful call to enc
 
 The AWS Encryption SDK offers advanced data protection features, including envelope encryption and additional authenticated data \(AAD\)\. It also offers secure, authenticated, symmetric key algorithm suites, such as 256\-bit AES\-GCM with key derivation and signing\.
 
-The AWS Encryption SDK is developed as an open source project\. It is available in Java, Python, and a command line interface that is supported on Linux, macOS, and Windows\. All implementations are interoperable\. For example, you can encrypt your data with the Java library and decrypt it with the Python library\. Or you can encrypt data with the CLI and decrypt it with the Python library\.
+The AWS Encryption SDK is developed as an open source project\. It is available in [Java](https://github.com/aws//aws-encryption-sdk-java), [Python](https://github.com/aws//aws-encryption-sdk-python), [C](https://github.com/awslabs//aws-encryption-sdk-c) \(preview release\) and a [command line interface](https://github.com/aws//aws-encryption-sdk-cli) that is supported on Linux, macOS, and Windows\. All implementations are interoperable\. For example, you can encrypt your data with the Java library and decrypt it with the Python library\. Or you can encrypt data with the C library and decrypt it with the CLI\.
 
 For informations about the AWS Encryption SDK, see the [AWS Encryption SDK Developer Guide](https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/)\.
