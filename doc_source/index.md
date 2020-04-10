@@ -1,7 +1,7 @@
-# AWS Cryptography Services AWS Cryptographic Services and Tools Guide
+# AWS cryptography services AWS cryptographic services and tools guide
 
 -----
-*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -14,27 +14,28 @@ Amazon's trademarks and trade dress may not be used in
 
 -----
 ## Contents
-+ [AWS Cryptographic Services and Tools](awscryp-overview.md)
-   + [What is Cryptography?](awscryp-whatis-toplevel.md)
-   + [Cryptography Concepts](cryptography-concepts.md)
-      + [Cryptographic Algorithms](concepts-algorithms.md)
-   + [AWS Cryptographic Services and Tools](awscryp-service-toplevel.md)
++ [AWS cryptographic services and tools](awscryp-overview.md)
+   + [What is cryptography?](awscryp-whatis-toplevel.md)
+   + [Cryptography concepts](cryptography-concepts.md)
+      + [Cryptographic algorithms](concepts-algorithms.md)
+   + [AWS cryptographic services and tools](awscryp-service-toplevel.md)
       + [AWS CloudHSM](awscryp-service-hsm.md)
       + [AWS Key Management Service](awscryp-service-kms.md)
       + [AWS Encryption SDK](awscryp-service-encrypt.md)
       + [DynamoDB Encryption Client](awscryp-service-ddb-client.md)
-      + [Other AWS Services that use Cryptography](awscryp-service-other.md)
-   + [How to Choose an Encryption Tool or Service](awscryp-choose-toplevel.md)
-      + [When To Use AWS Key Management Service (AWS KMS)](awscryp-choose-kms.md)
-      + [When To Use AWS CloudHSM](awscryp-choose-hsm.md)
-      + [When To Use AWS Encryption SDK](awscryp-choose-sdk.md)
-      + [When To Use DynamoDB Encryption Client](awscryp-choose-ddb.md)
-+ [AWS PKI Services](awspki-overview.md)
-   + [What is Public Key Infrastructure?](awspki-whatis-toplevel.md)
-   + [PKI Concepts](pki-concepts.md)
-   + [AWS Public Key Infrastructure (PKI) Services and Tools](awspki-service-toplevel.md)
+      + [AWS Secrets Manager](awscryp-service-sm.md)
+      + [Other AWS services that use cryptography](awscryp-service-other.md)
+   + [How to choose an encryption tool or service](awscryp-choose-toplevel.md)
+      + [When to use AWS Key Management Service (AWS KMS)](awscryp-choose-kms.md)
+      + [When to use AWS CloudHSM](awscryp-choose-hsm.md)
+      + [When to use AWS Encryption SDK](awscryp-choose-sdk.md)
+      + [When to use DynamoDB Encryption Client](awscryp-choose-ddb.md)
++ [AWS PKI services](awspki-overview.md)
+   + [What is public key infrastructure?](awspki-whatis-toplevel.md)
+   + [PKI concepts](pki-concepts.md)
+   + [AWS public key infrastructure (PKI) services and tools](awspki-service-toplevel.md)
       + [AWS Certificate Manager](awspki-service-acm.md)
       + [AWS Certificate Manager Private Certificate Authority](awspki-service-pca.md)
-      + [Other AWS Services that use SSL/TLS Certificates](awspki-service-other.md)
-   + [How to Choose a PKI Service](awspki-choose-toplevel.md)
-+ [Document History for AWS Cryptography Services](document-history.md)
+      + [Other AWS services that use X.509 public key certificates](awspki-service-other.md)
+   + [How to choose a PKI service](awspki-choose-toplevel.md)
++ [Document history for AWS cryptography services](document-history.md)

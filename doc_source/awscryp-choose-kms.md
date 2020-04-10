@@ -1,4 +1,4 @@
-# When To Use AWS Key Management Service \(AWS KMS\)<a name="awscryp-choose-kms"></a>
+# When to use AWS Key Management Service \(AWS KMS\)<a name="awscryp-choose-kms"></a>
 
 When you encrypt data, you need to protect your encryption key\. If you encrypt your key, you need to protect its encryption key\. Eventually, you must protect the highest level encryption key \(known as a *master key*\) in the hierarchy that protects your data\. That's where AWS KMS comes in\.
 
@@ -13,4 +13,3 @@ Additionally, you can create and manage [key policies](https://docs.aws.amazon.c
 **When Do I Use Something Else?**
 + AWS KMS does not store or manage data keys, and you cannot use KMS to encrypt or decrypt with data keys\. To use data keys to encrypt and decrypt, use the AWS Encryption SDK\. 
 + AWS KMS CMKs are backed by [FIPS\-validated](https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/3139) hardware service modules \(HSMs\) that KMS manages\. To manage your own HSMs, use [AWS CloudHSM](awscryp-choose-hsm.md)\. 
-+ AWS KMS only supports [symmetric encryption](concepts-algorithms.md#concepts-symm)\. If you want to use [asymmetric encryption](concepts-algorithms.md#concepts-asymm), use [AWS CloudHSM](awscryp-service-hsm.md)\.

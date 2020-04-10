@@ -1,4 +1,4 @@
-# When To Use AWS CloudHSM<a name="awscryp-choose-hsm"></a>
+# When to use AWS CloudHSM<a name="awscryp-choose-hsm"></a>
 
 [AWS CloudHSM](https://docs.aws.amazon.com/cloudhsm/latest/userguide/) is a service for creating and managing cloud\-based hardware security modules\. A *hardware security module* \(HSM\) is a specialized security device that generates and stores cryptographic keys\. 
 

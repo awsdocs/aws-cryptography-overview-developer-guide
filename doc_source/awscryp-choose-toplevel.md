@@ -1,4 +1,4 @@
-# How to Choose an Encryption Tool or Service<a name="awscryp-choose-toplevel"></a>
+# How to choose an encryption tool or service<a name="awscryp-choose-toplevel"></a>
 
 AWS offers several different cryptographic tools and services\. This section is designed to help you learn about them and decide which tools and services you should use for your projects\. 
 
@@ -9,17 +9,17 @@ Before selecting your cryptographic tools and services, decide if you prefer cli
 **What do you need to protect your data?**
 + Do you need to create and manage the hardware security modules that store your encryption keys? Consider the [AWS CloudHSM](awscryp-choose-hsm.md) service\.
 + Would you benefit from an AWS service that protects your encryption keys for you? Consider [AWS Key Management Service](awscryp-choose-kms.md) \(AWS KMS\)\.
-+ Do you need to protect your data before you send it to AWS? Use a client\-side encryption library, like the AWS Encryption SDK, the DynamoDB Encryption Client, or the Amazon S3 Encryption Client\.
++ Do you need to protect your data before you send it to AWS? Use a client\-side encryption library, like the [AWS Encryption SDK](awscryp-choose-sdk.md), the [DynamoDB Encryption Client](awscryp-choose-ddb.md), or [Amazon S3 client\-side encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html)\.
 
 **What type of data do you need to protect? **
 + To protect DynamoDB table items before you send them to DynamoDB, use the [DynamoDB Encryption Client](awscryp-choose-ddb.md)\. But be sure that you need it\. DynamoDB encryption at rest automatically protects all DynamoDB tables whenever they are written to disk\. 
-+ To protect Amazon S3 objects before you send them to an Amazon S3 bucket, use the [Amazon S3 Encryption Client](Amazon Simple Storage Service Developer GuideUsingClientSideEncryption.html)\. Amazon S3 also offers [server\-side encryption](Amazon Simple Storage Service Developer Guideserv-side-encryption.html)\. 
++ To protect Amazon S3 objects before you send them to an Amazon S3 bucket, use [Amazon S3 client\-side encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html)\. Amazon S3 also offers [server\-side encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html)\. 
 + To protect all other types of data at their source, use the [AWS Encryption SDK](awscryp-choose-sdk.md)\.
 
 When choosing an SDK or an encryption client library, remember that they are not compatible\. You cannot use one library to encrypt data and a different library to decrypt the data\.
 
 **Topics**
-+ [When To Use AWS KMS](awscryp-choose-kms.md)
-+ [When To Use AWS CloudHSM](awscryp-choose-hsm.md)
-+ [When To Use AWS Encryption SDK](awscryp-choose-sdk.md)
-+ [When To Use DynamoDB Encryption Client](awscryp-choose-ddb.md)
++ [When to use AWS KMS](awscryp-choose-kms.md)
++ [When to use AWS CloudHSM](awscryp-choose-hsm.md)
++ [When to use AWS Encryption SDK](awscryp-choose-sdk.md)
++ [When to use DynamoDB Encryption Client](awscryp-choose-ddb.md)

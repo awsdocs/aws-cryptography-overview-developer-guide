@@ -1,4 +1,4 @@
-# AWS Public Key Infrastructure \(PKI\) Services and Tools<a name="awspki-service-toplevel"></a>
+# AWS public key infrastructure \(PKI\) services and tools<a name="awspki-service-toplevel"></a>
 
 AWS offers multiple PKI services that can help you easily and securely manage your certificate infrastructure\. The primary AWS offerings for PKI are tightly linked:
 + **[AWS Certificate Manager \(ACM\)](awspki-service-acm.md)** is used to generate, issue, and manage [public and private SSL/TLS certificates](pki-concepts.md#concept-pub-cert) for use with your AWS based websites and applications\.

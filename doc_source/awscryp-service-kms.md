@@ -4,7 +4,7 @@ AWS Key Management Service \(AWS KMS\) is an AWS service that makes it easy for 
 
 [Many AWS services](https://docs.aws.amazon.com/kms/latest/developerguide/service-integration.html) are integrated with AWS KMS so they encrypt your data with master keys in your AWS account\. AWS KMS is also integrated with [AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/) to deliver detailed logs of all cryptographic operations that use your master keys and management operations that change their configuration\. This detailed logging helps you fulfill your auditing, regulatory and compliance requirements\.
 
-## Why Use KMS?<a name="awscryp-service-kms-why"></a>
+## Why use AWS KMS?<a name="awscryp-service-kms-why"></a>
 
 AWS KMS protects the *master keys* that protect your data\. 
 
@@ -16,7 +16,7 @@ AWS KMS protects your master keys\. The *customer master keys* \(CMKs\) that KMS
 
 ![\[AWS KMS protects your master keys\]](http://docs.aws.amazon.com/crypto/latest/userguide/images/key-hierarchy-cmk.png)
 
-## Using and Managing AWS KMS Master Keys<a name="awscryp-service-kms-using-and-managing"></a>
+## Using and managing AWS KMS customer master keys<a name="awscryp-service-kms-using-and-managing"></a>
 
 AWS KMS customer master keys \(CMKs\) are 256\-bit Advanced Encryption Standard \(AES\) symmetric keys that are not exportable\. They spend their entire lifecycle entirely within AWS KMS\.
 
@@ -28,7 +28,7 @@ You can create, view, and manage the AWS KMS customer master keys \(CMKs\) in yo
 
 You can also use your CMKs in cryptographic operations\. You can encrypt and decrypt small amounts of data directly under the CMK\. But CMKs are typically used to generate, encrypt, decrypt, and reencrypt exportable data keys that protect your data outside of AWS KMS\. You can also give other AWS services permission to use your CMKs on your behalf to encrypt the data that the service stores and manages for you\.
 
-## More Resources and Information<a name="awscryp-service-kms-more-info"></a>
+## More resources and information<a name="awscryp-service-kms-more-info"></a>
 
 You can read about AWS Key Management Service in the [AWS Key Management Service Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/) and the [AWS Key Management Service API Reference](https://docs.aws.amazon.com/kms/latest/APIReference/)\. If you have questions, read and post on the [AWS KMS Discussion Forum](https://forums.aws.amazon.com/forum.jspa?forumID=182)\.
 

@@ -1,4 +1,4 @@
-# PKI Concepts<a name="pki-concepts"></a>
+# PKI concepts<a name="pki-concepts"></a>
 
 As you work with AWS PKI tools and services, you are likely to encounter a number of basic concepts\.
 

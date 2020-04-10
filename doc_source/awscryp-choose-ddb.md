@@ -1,4 +1,4 @@
-# When To Use DynamoDB Encryption Client<a name="awscryp-choose-ddb"></a>
+# When to use DynamoDB Encryption Client<a name="awscryp-choose-ddb"></a>
 
 The [Amazon DynamoDB Encryption Client](https://docs.aws.amazon.com/dynamodb-encryption-client/latest/devguide/) is a client\-side encryption library designed especially for data that you store in [Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/) \(DynamoDB\)\. It encrypts the attribute values in each table item using a unique encryption key and then signs the item to protect it against unauthorized changes\. Unauthorized changes include adding or deleting attributes or swapping encrypted values\. 
 

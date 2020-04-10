@@ -1,4 +1,4 @@
-# When To Use AWS Encryption SDK<a name="awscryp-choose-sdk"></a>
+# When to use AWS Encryption SDK<a name="awscryp-choose-sdk"></a>
 
 The [AWS Encryption SDK](https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/) is a client\-side encryption library that makes it easier to encrypt and decrypt data of any type in your application\. The Encryption SDK is available in [several programming languages](https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/programming-languages.html), including a [command\-line interface](https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/crypto-cli.html)\. 
 
@@ -11,6 +11,6 @@ When you encrypt data, the SDK returns a single, portable [encrypted message](ht
 
 **When Do I Use Something Else?**
 + Many AWS services optionally encrypt the data that they store and manage for you\. \(This is known as *server\-side encryption*\.\) Many of these services are [integrated with AWS KMS](https://aws.amazon.com/kms/details/#integration)\. For details, see the information about encryption options in the service documentation\.
-+ You might want to use a client\-side encryption library that includes special features for your data, such as the [Amazon S3 Encryption Client](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html) or the [DynamoDB Encryption Client](https://aws.amazon.com/developer/client-side-encryption-for-amazon-dynamodb/)\.
++ You might want to use a client\-side encryption library that includes special features for your data, such as [Amazon S3 client\-side encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html) or the [DynamoDB Encryption Client](awscryp-service-ddb-client.md)\.
 
   When you choose an SDK or encryption client library, remember that libraries are not compatible with one another\. That is, you cannot use one library to encrypt data and a different library to decrypt the data\. Unless you need a feature provided only by a different library, use the AWS Encryption SDK\.

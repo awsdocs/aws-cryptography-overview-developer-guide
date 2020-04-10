@@ -1,4 +1,4 @@
-# Cryptographic Algorithms<a name="concepts-algorithms"></a>
+# Cryptographic algorithms<a name="concepts-algorithms"></a>
 
 An *encryption algorithm* is a formula or instructions series that converts a plaintext readable message into an unreadable ciphertext\. Algorithms use advanced mathematics and one or more encryption keys to make it relatively easy to encode a message but virtually impossible to decode without knowing the keys\. Algorithms often involve multiple layers of encryption and can require additional random and sequential one\-time values that prevent attacks and duplicate results\. 
 
@@ -7,10 +7,10 @@ AWS cryptography tools and services that encrypt data support secure algorithms 
 This section describes some of the symmetric and asymmetric algorithms that AWS tools and services support\.
 
 **Topics**
-+ [Symmetric Algorithms](#concepts-algos)
-+ [Asymmetric Algorithms](#concepts-asymm)
++ [Symmetric algorithms](#concepts-algos)
++ [Asymmetric algorithms](#concepts-asymm)
 
-## Symmetric Algorithms<a name="concepts-algos"></a>
+## Symmetric algorithms<a name="concepts-algos"></a>
 
 ### <a name="concepts-symm"></a>
 
@@ -35,7 +35,7 @@ The following illustration shows the same secret key and symmetric algorithm bei
 
 There are two types of symmetric key ciphers, block ciphers and stream ciphers\. A **block** cipher divides the plaintext messaged into fixed\-length strings called blocks and encrypts one block at a time\. Block ciphers are typically considered to be more powerful and practical primitives than stream ciphers, but they're also slower\. **Stream** ciphers encrypt each unit of plaintext, one unit at a time, with a corresponding unit of a key stream\. The result is a single unit of ciphertext\. 
 
-## Asymmetric Algorithms<a name="concepts-asymm"></a>
+## Asymmetric algorithms<a name="concepts-asymm"></a>
 
 AWS services typically support RSA and Elliptic Curve Cryptography \(ECC\) asymmetric algorithms\.
 

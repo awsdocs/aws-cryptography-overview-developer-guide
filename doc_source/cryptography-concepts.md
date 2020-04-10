@@ -1,4 +1,4 @@
-# Cryptography Concepts<a name="cryptography-concepts"></a>
+# Cryptography concepts<a name="cryptography-concepts"></a>
 
 As you work with cryptographic tools and services, you are likely to encounter a number of basic concepts\.
 
@@ -25,7 +25,7 @@ As you work with cryptographic tools and services, you are likely to encounter a
 + [stream cipher](#define-stream-cipher)
 
 **additional authenticated data \(AAD\)**  <a name="term-aad"></a>
-Nonsecret data that is provided to [encryption](#define-encryption) and [decryption](#define-decryption) operations to add provide an additional integrity and authenticity check on the encrypted data\. Typically, the decrypt operation fails if the AAD provided to the encrypt operation does not match the AAD provided to the decrypt operation\.  
+Nonsecret data that is provided to [encryption](#define-encryption) and [decryption](#define-decryption) operations to add an additional integrity and authenticity check on the encrypted data\. Typically, the decrypt operation fails if the AAD provided to the encrypt operation does not match the AAD provided to the decrypt operation\.  
 [AWS Key Management Service](awscryp-service-kms.md) \(AWS KMS\) and the [AWS Encryption SDK](awscryp-service-encrypt.md) both support AAD by using an [encryption context](#define-encryption-context)\.  
 See also: [authenticated encryption](#define-authenticated-encryption)
 
@@ -36,7 +36,7 @@ For example, the AWS Key Management Service \(AWS KMS\) [https://docs.aws.amazon
 **asymmetric and symmetric encryption**  <a name="define-symmetric-asymmetric"></a>
 [Symmetric encryption](concepts-algorithms.md#concepts-algos) uses the same secret key to perform both the [encryption](#define-encryption) and [decryption](#define-decryption) processes\.   
 [Asymmetric encryption](concepts-algorithms.md#concepts-asymm), also known as *public\-key encryption*, uses two keys, a [public key](#define-public-key) for encryption and a corresponding [private key](#define-private-key) for decryption\. The public key and private key are mathematically related so that when the public key is used for encryption, the corresponding private key must be used for decryption\. [Encryption algorithms](#define-encryption-algorithm) are either symmetric or asymmetric\.  
-For more information, see [Cryptographic Algorithms](concepts-algorithms.md)\.
+For more information, see [Cryptographic algorithms](concepts-algorithms.md)\.
 
 **authentication**  <a name="define-authentication"></a>
 The process of verifying identity, that is, determining whether an entity is who it claims to be and that the authentication information has not been manipulated by unauthorized entities\.
@@ -52,7 +52,7 @@ The encrypted data\. Ciphertext is typically the output of an [encryption algori
 *Server\-side encryption* is encrypting data at its destination, that is, the application or service that receives it\.  
 The method that you choose depends on the sensitivity of your data and the security requirements of your application\. Client\-side and server\-side encryption differ in when, where, and who encrypts and decrypts the data\. They do not necessarily define how the data is encrypted and might use the same process\. In addition, they are not exclusive\. You can often use client\-side and server\-side encryption on the same data\.   
 AWS supports both client\-side and server\-side encryption\. Most AWS services that store or manage customer data offer a server\-side encryption option or perform server\-side encryption of your data by default\. These services transparently encrypt your data before writing it to disk and transparently decrypt it when you access it\. Most AWS services that support server\-side encryption are integrated with [AWS Key Management Service](awscryp-service-kms.md) \(AWS KMS\) to protect the encryption keys that protect your data\. For a list of integrated services, see [AWS Service Integration](https://aws.amazon.com/kms/details/#integration)\.   
-AWS also supports client\-side encryption libraries, such as the [AWS Encryption SDK](awscryp-service-encrypt.md), the [DynamoDB Encryption Client](awscryp-service-ddb-client.md), and the [Amazon Simple Storage Service \(Amazon S3\) Encryption Client](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html)\. For help choosing the library that best meets your needs, see [How to Choose a PKI Service](awspki-choose-toplevel.md)\.
+AWS also supports client\-side encryption libraries, such as the [AWS Encryption SDK](awscryp-service-encrypt.md), the [DynamoDB Encryption Client](awscryp-service-ddb-client.md), and [Amazon S3 client\-side encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html)\. For help choosing the library that best meets your needs, see [How to choose a PKI service](awspki-choose-toplevel.md)\.
 
 **data key**  <a name="define-data-key"></a>
 In [envelope encryption](#define-envelope-encryption), a *data key* or *data encryption key* is an encryption key that is used to protect data\. Data keys differ from [master keys](#define-master-key) and [key encryption keys](#define-key-encryption-key), which are typically used to encrypt other encryption keys\.   
