@@ -1,5 +1,12 @@
 # AWS Certificate Manager Private Certificate Authority<a name="awspki-service-pca"></a>
 
-AWS Certificate Manager Private Certificate Authority \(ACM PCA\) is a private [certificate authority \(CA\)](pki-concepts.md#concept-ca) service with which you can easily and securely manage your PKI CA infrastructure and your [private certificates](pki-concepts.md#concept-priv-cert)\. ACM PCA provides a highly available private CA service without the investment and maintenance costs of operating your own subordinate CA\. By extending the scope of [AWS Certificate Manager ACM](awspki-service-acm.md) to private certificates, ACM PCA helps you manage both public and private certificates from within one PKI environment\.
+AWS Certificate Manager Private Certificate Authority is a managed private CA service that extends ACM certificate management to private certificates\. With private certificates you can authenticate resources inside an organization\. Private certificates allow entities like users, web servers, VPN users, internal API endpoints, and IoT devices to prove their identity and establish encrypted communications channels\. With ACM Private CA, you can create complete CA hierarchies, including root and subordinate CAs, without the investment and maintenance costs of operating your own certificate authority\. 
 
-You can use ACM PCA to perform a variety of PKI\-related tasks, including the creation of private CAs and the generation, validation, renewal, maintenance, and deletion of private certificates\. For more information about ACM PCA, see the [ACM PCA User Guide](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html)\.
+With a private CA, you avoid many of the constraints that are imposed on public certificates and CAs\. Using the ACM Private CA console and API operations, you can do the following:
++ Create certificates with any subject name you want\.
++ Create certificates with any expiration date you want\.
++ Use any supported private key algorithm and key length\.
++ Use any supported signing algorithm\.
++ Configure certificates in bulk using templates\.
+
+For more information about ACM Private CA, see the [AWS Certificate Manager Private Certificate Authority User Guide](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html)\.

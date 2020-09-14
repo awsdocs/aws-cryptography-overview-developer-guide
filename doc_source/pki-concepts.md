@@ -3,7 +3,7 @@
 As you work with AWS PKI tools and services, you are likely to encounter a number of basic concepts\.
 
 **Topics**
-+  [asymmetric key cryptography](#concept-asymmetric) 
++  [asymmetric\-key cryptography](#concept-asymmetric) 
 +  [certificate authority \(CA\) ](#concept-ca) 
 +  [certificate authority certificate](#concept-ca-cert) 
 +  [certificate signature](#concept-signing) 
@@ -12,20 +12,24 @@ As you work with AWS PKI tools and services, you are likely to encounter a numbe
 +  [HTTPS](#concept-https) 
 +  [private certificate](#concept-priv-cert) 
 +  [public certificate](#concept-pub-cert) 
-+  [public key infrastructure \(PKI\)](#concept-pki) 
++  [public\-key encryption](#concept-asymmetric) 
++  [public\-key infrastructure \(PKI\)](#concept-pki) 
 +  [root certificate](#concept-root) 
 +  [Secure Sockets Layer \(SSL\) and Transport Layer Security \(TLS\) ](#concept-ssl) 
 +  [SSL server certificates](#concept-sslcert) 
-+  [symmetric key cryptography](#concept-symmetric) 
++  [symmetric\-key cryptography](#concept-symmetric) 
 +  [TCP](#concept-tcp) 
 +  [trust](#concept-trust)
 
-**asymmetric key cryptography **  <a name="concept-asymmetric"></a>
-The use of different but mathematically related keys to encrypt and decrypt content\. One of the keys is public and is typically made available in an X\.509 version 3 certificate\. The other key is private and is stored securely\. The X\.509 certificate binds the identity of a user, computer, or other resource \(the certificate subject\) to the public key\. See also: [symmetric key cryptography](#concept-symmetric)\.
+**asymmetric\-key cryptography **  <a name="concept-asymmetric"></a>
+Also called *public\-key cryptography*\. The use of different but mathematically related keys to encrypt and to decrypt content\. One of the keys is public and is typically made available in an X\.509 version 3 certificate\. The other key is private and is stored securely\. The X\.509 certificate binds the identity of a user, computer, or other resource \(the certificate subject\) to the public key\. See also: [symmetric\-key cryptography](#concept-symmetric)\.
 
 **certificate authority \(CA\) **  <a name="concept-ca"></a>
-A trusted third party that issues \(and, if necessary, revokes\) digital certificates\. The most common type of certificate is based on the ISO X\.509 standard\. An X\.509 certificate affirms the identity of the certificate subject and binds that identity to a public key\. The subject can be a user, an application, a computer, or other device\. The CA [signs a certificate](#concept-signing) by hashing the contents and then encrypting the hash with the private key related to the public key in the certificate\. A client application such as a web browser that needs to affirm the identity of a subject uses the public key to decrypt the certificate signature\. It then hashes the certificate contents and compares the hashed value to the decrypted signature to determine whether they match\.  
-For information about certificate signing, see [certificate signature](#concept-signing)\.
+A trusted third party that issues \(and, if necessary, revokes\) digital certificates\. The most common type of certificate is based on the ISO X\.509 standard\. An X\.509 certificate affirms the identity of the certificate subject and binds that identity to a public key\. The subject can be a user, an application, a computer, or other device\. The CA [signs a certificate](#concept-signing) by hashing its contents and then encrypting the hash with the private key corresponding to the public key in the certificate\. A client application such as a web browser that needs to affirm the identity of a subject uses the public key to decrypt the certificate signature\. It then hashes the certificate contents and compares the hashed value to the decrypted signature to determine whether they match\.  
+For information about certificate signing, see [certificate signature](#concept-signing)\.  
+A CA can be either public or private:  
++ Public CA—A commercial, non\-profit, or government entity that issues certificates that are universally valid\.
++ Private CA—An entity within an organization that issues certificate that are valid only inside the organization\.
 
 **certificate authority certificate **  <a name="concept-ca-cert"></a>
 A certificate that affirms the identity of the [certificate authority \(CA\)](#concept-ca) and binds it to the public key that is contained in the certificate\.
@@ -53,18 +57,24 @@ The right to use a domain name that is delegated by domain name registrars\. Reg
 A hierarchical distributed naming system for computers and other resources connected to the internet or a private network\. DNS is primarily used to translate textual domain names, such as `aws.amazon.com`, into numerical IP \(internet protocol\) addresses of the form `111.222.333.444`\. The DNS database for your domain, however, contains a number of records that can be used for other purposes\. For example, with [AWS Certificate Manager](awspki-service-acm.md) you can use a CNAME record to validate that you own or control a domain when you request a certificate\.
 
 ** HTTPS **  <a name="concept-https"></a>
-The abbreviation for *HTTP over [SSL/TLS](#concept-ssl)*, a secure form of Hypertext Transfer Protocol \(HTTP\) that is supported by all major browsers and servers\. All HTTP requests and responses are encrypted before being sent across a network\. HTTPS combines the HTTP protocol with [symmetric](#concept-symmetric), [asymmetric](#concept-asymmetric), and X\.509 certificate\-based cryptographic techniques\. HTTPS works by inserting a cryptographic security layer below the HTTP application layer and above the [TCP](#concept-tcp) transport layer in the Open Systems Interconnection \(OSI\) model\. The security layer uses the Secure Sockets Layer \(SSL\) protocol or the Transport Layer Security \(TLS\) protocol\. 
+The abbreviation for *HTTP over [SSL/TLS](#concept-ssl)*, a secure form of Hypertext Transfer Protocol \(HTTP\) that is supported by all major browsers and servers\. All HTTP requests and responses are encrypted before being sent across a network, thereby providing transport security\. HTTPS combines the HTTP protocol with [symmetric](#concept-symmetric), [asymmetric](#concept-asymmetric), and X\.509 certificate\-based cryptographic techniques\. HTTPS works by inserting a cryptographic security layer below the HTTP application layer and above the [TCP](#concept-tcp) transport layer in the Open Systems Interconnection \(OSI\) model\. The security layer uses the Secure Sockets Layer \(SSL\) protocol or the Transport Layer Security \(TLS\) protocol\. 
 
 ** private certificate **  <a name="concept-priv-cert"></a>
-An [SSL/TLS](#concept-ssl) certificate that verifies the ownership of a private key\. Use them to identify resources such as clients, servers, applications, services, devices, and users\. When establishing a secure encrypted communications channel, each resource uses a certificate as well as cryptographic techniques to prove its identity to another resource\. Internal API endpoints, web servers, VPN users, IoT devices, and many other applications use private certificates to establish encrypted communication channels that are necessary for their secure operation\. By default, private certificates are not publicly trusted\. An internal administrator must explicitly configure applications to trust private certificates and distribute the certificates\.  
+An [SSL/TLS](#concept-ssl) certificate that authenticates the identity of a resource in a private PKI\. [Trust](#concept-trust) in a private certificate rests on the integrity of the private certificate authority \(CA\) that issued it\.  
+Not to be confused with the private \(secret\) key of a public\-key encryption key pair\.  
 See also [public certificate](#concept-pub-cert)\.
 
 ** public certificate **  <a name="concept-pub-cert"></a>
-An [SSL/TLS](#concept-ssl) certificate that verifies the ownership of a public key and is used to initiate a secure, encrypted connection between a web server and a client\. Public certificate [trust](#concept-trust) is built upon the integrity of an issuing entity, called a [certificate authority \(CA\)](#concept-ca), which authenticates the identity of a certificate through the use of a [certificate signature](#concept-signing)\.  
+An [SSL/TLS](#concept-ssl) certificate that authenticates the identity of a resource in a public PKI\. [Trust](#concept-trust) in a public certificate rests on the integrity of the public certificate authority \(CA\) that issued it\.  
+Not to be confused with the public key of a public\-key encryption key pair\.  
 See also [private certificate](#concept-priv-cert)\.
 
-** public key infrastructure \(PKI\) **  <a name="concept-pki"></a>
-A comprehensive system that enables the creation, issuance, management, distribution, use, storage, and revocation of digital certificates\. A PKI consists of people, hardware, software, policies, documents, and procedures\.
+** public\-key encryption \(PKI\) **  <a name="concept-pubkeycrypt"></a>
+See [asymmetric\-key encryption](#concept-asymmetric)\.
+
+** public\-key infrastructure \(PKI\) **  <a name="concept-pki"></a>
+A comprehensive system that enables the creation, issuance, management, distribution, use, storage, and revocation of digital certificates\. A PKI consists of people, hardware, software, policies, documents, and procedures\. A public PKI is is used to secure communication in the world at large \(for example, over the internet\) and derives its authority from one or more public certificate authorities \(CAs\)\. A private PKI is used to secure communications within an organization, derives its authority from one or more private CAs, and has no validity outside the organization\.  
+The "public key" of public key infrastructure refers to [public\-key encryption](#concept-asymmetric)\.
 
 ** root certificate **  <a name="concept-root"></a>
 The certificate issued by the [certificate authority \(CA\)](#concept-ca) that is at the top of the CA hierarchy\. A certificate authority typically exists within a hierarchical structure that contains multiple other CAs with clearly defined parent\-child relationships between them\. Child or subordinate CAs are certified by their parent CAs, creating a certificate chain\. The CA at the top of the hierarchy is referred to as the root CA, and its certificate is called the root certificate\. This certificate is typically self\-signed\. 
@@ -72,14 +82,14 @@ The certificate issued by the [certificate authority \(CA\)](#concept-ca) that i
 **Secure Sockets Layer \(SSL\) and Transport Layer Security \(TLS\)**  <a name="concept-ssl"></a>
 Cryptographic protocols that provide communication security over a computer network\. TLS is the successor of SSL\. They both use X\.509 certificates to authenticate the server\. Both protocols negotiate a symmetric key between the client and the server that is used to encrypt data flowing between the two entities\. 
 
-**SSL server certificates **  <a name="concept-sslcert"></a>
+**SSL/TLS server certificate**  <a name="concept-sslcert"></a>
 An X\.509 version 3 data structure that binds the public key in the certificate to the subject of the certificate and is signed by a [certificate authority \(CA\)](#concept-ca)\. An SSL/TLS certificate contains the name of the server, the validity period, the public key, the signature algorithm, and more\. Server certificates are required for HTTPS transactions to authenticate a server\.
 
-**symmetric key cryptography **  <a name="concept-symmetric"></a>
-The practice of using the same key to both encrypt and decrypt data\. See also: [asymmetric key cryptography](#concept-asymmetric)\.
+**symmetric\-key cryptography **  <a name="concept-symmetric"></a>
+The practice of using the same key to encrypt and to decrypt data\. See also: [asymmetric\-key cryptography](#concept-asymmetric)\.
 
 **Transmission Control Protocol \(TCP\)**  <a name="concept-tcp"></a>
 As part of the TCP/IP stack, TCP is one of the main sets of rules used when sending data between networks\. By verifying the order in which information is received, TCP assures the quality of transmissions across hosts and servers\. TCP standards are regulated by the [Internet Engineering Task Force \(IETF\)](https://www.ietf.org/)\. 
 
 **trust **  <a name="concept-trust"></a>
-The reliability of a website's identity as established by verifying the website's certificate\. BrowsersC trust only a small number of certificates known as CA [root certificates](#concept-root)\. A trusted third party, known as a [certificate authority \(CA\)](#concept-ca), validates the identity of the website and issues a signed digital certificate to the website's operator\. The browser can then check the digital signature to validate the identity of the website\. If validation is successful, the browser displays a lock icon in the address bar\.
+The reliability of a website's identity as established by verifying the website's certificate\. Browsers trust only a small number of certificates known as CA [root certificates](#concept-root)\. A trusted third party, known as a [certificate authority \(CA\)](#concept-ca), validates the identity of the website and issues a signed digital certificate to the website's operator\. The browser can then check the digital signature to validate the identity of the website\. If validation is successful, the browser displays a lock icon in the address bar\.

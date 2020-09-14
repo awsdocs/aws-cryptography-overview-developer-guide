@@ -1,12 +1,12 @@
 # AWS Key Management Service<a name="awscryp-service-kms"></a>
 
-AWS Key Management Service \(AWS KMS\) is an AWS service that makes it easy for you to create and control the encryption keys that are used to encrypt your data\. The master keys that you create in AWS KMS are protected by [FIPS 140\-2 validated cryptographic modules](https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/3139)\. They never leave AWS KMS unencrypted\. To use or manage your master keys, you interact with AWS KMS\.
+AWS Key Management Service \(AWS KMS\) is an AWS service that makes it easy for you to create and control the encryption keys that are used to encrypt your data\. The customer master keys \(CMKs\) that you create in AWS KMS are protected by [FIPS 140\-2 validated cryptographic modules](https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/3139)\. They never leave AWS KMS unencrypted\. To use or manage your CMKs, you interact with AWS KMS\.
 
-[Many AWS services](https://docs.aws.amazon.com/kms/latest/developerguide/service-integration.html) are integrated with AWS KMS so they encrypt your data with master keys in your AWS account\. AWS KMS is also integrated with [AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/) to deliver detailed logs of all cryptographic operations that use your master keys and management operations that change their configuration\. This detailed logging helps you fulfill your auditing, regulatory and compliance requirements\.
+[Many AWS services](https://docs.aws.amazon.com/kms/latest/developerguide/service-integration.html) are integrated with AWS KMS so they encrypt your data with CMKs in your AWS account\. AWS KMS is also integrated with [AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/) to deliver detailed logs of all cryptographic operations that use your CMKs and management operations that change their configuration\. This detailed logging helps you fulfill your auditing, regulatory and compliance requirements\.
 
 ## Why use AWS KMS?<a name="awscryp-service-kms-why"></a>
 
-AWS KMS protects the *master keys* that protect your data\. 
+AWS KMS protects the *customer master keys* that protect your data\. 
 
 In the classic scenario, you encrypt your data using data key A\. But you need to protect data key A, so you encrypt data key A by using data key B\. Now data key B is vulnerable, so you encrypt it by using data key C\. And, so on\. This encryption technique, which is called *[envelope encryption](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#enveloping)*, always leaves one last encryption key unencrypted so you can decrypt your encryption keys and data\. That last unencrypted \(or plaintext\) key is called a *master key*\. 
 
@@ -19,6 +19,8 @@ AWS KMS protects your master keys\. The *customer master keys* \(CMKs\) that KMS
 ## Using and managing AWS KMS customer master keys<a name="awscryp-service-kms-using-and-managing"></a>
 
 AWS KMS customer master keys \(CMKs\) are 256\-bit Advanced Encryption Standard \(AES\) symmetric keys that are not exportable\. They spend their entire lifecycle entirely within AWS KMS\.
+
+You can also create asymmetric RSA or elliptic curve \(ECC\) CMKs backed by asymmetric key pairs\. The public key in each asymmetric CMK is exportable, but the private key remains within AWS KMS\.
 
 You can create, view, and manage the AWS KMS customer master keys \(CMKs\) in your AWS account from the AWS Management Console and AWS KMS API operations\. You have full control over your CMKs:
 + Establish policies that determine who can use and manage CMKs\. 
