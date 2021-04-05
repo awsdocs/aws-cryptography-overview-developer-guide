@@ -35,7 +35,7 @@ The following illustration shows the same secret key and symmetric algorithm bei
 
 ![\[Symmetric key decryption diagram\]](http://docs.aws.amazon.com/crypto/latest/userguide/images/Symmetric_Key_Decryption_sm.png)
 
-Symmetric key ciphers may be either block ciphers or stream ciphers\. A **block** cipher divides the plaintext messaged into fixed\-length strings called blocks and encrypts one block at a time\. Block ciphers are typically considered to be more powerful and practical primitives than stream ciphers, but they're also slower\. **Stream**ciphers encrypt each unit of plaintext \(such as a byte\), one unit at a time, with a corresponding unit from a random key stream\. The result is a single unit of ciphertext\.
+Symmetric key ciphers may be either block ciphers or stream ciphers\. A **block** cipher divides the plaintext messaged into fixed\-length strings called blocks and encrypts one block at a time\. Block ciphers are typically considered to be more powerful and practical primitives than stream ciphers, but they're also slower\. **Stream** ciphers encrypt each unit of plaintext \(such as a byte\), one unit at a time, with a corresponding unit from a random key stream\. The result is a single unit of ciphertext\.
 
 Both AES and 3DES are block ciphers\.
 
