@@ -41,7 +41,7 @@ Both AES and 3DES are block ciphers\.
 
 ## Asymmetric algorithms<a name="concepts-asymm"></a>
 
-AWS services typically support **RSA** and **Elliptic Curve Cryptography \(ECC\)** asymmetric algorithms\. These algorithms are useful for authentication and for establishing secure communication channels when it is inconvenient to share a symmetric key in advance\. For example, Amazon CloudFront supports a [long list](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html) of assymmetric ciphers used by the SSL/TLS protocols to enable encrypted connections over the web\.
+AWS services typically support **RSA** and **Elliptic Curve Cryptography \(ECC\)** asymmetric algorithms\. These algorithms are useful for authentication and for establishing secure communication channels when it is inconvenient to share a symmetric key in advance\. For example, Amazon CloudFront supports a [long list](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html) of asymmetric ciphers used by the SSL/TLS protocols to enable encrypted connections over the web\.
 
 An encryption scheme is called *asymmetric* if it uses one key — the public key — to encrypt and a different, but mathematically related, key — the private key — to decrypt\. It must be computationally infeasible to determine the private key if the only thing one knows is the public key\. Therefore, the public key can be distributed publicly while the private key is kept secret and secure\. Together the keys are referred to as a *key pair*\.
 
